@@ -2,6 +2,11 @@ import requests
 import sqlite3
 import json
 
+requests = [
+    'GetInverterRealtimeData.cgi',
+
+]
+
 parameters = {'Scope': 'System'}
 response = requests.get(
     'http://192.168.1.61/solar_api/v1/GetInverterRealtimeData.cgi', params=parameters)
