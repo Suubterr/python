@@ -1,0 +1,18 @@
+Fronius url example: http://192.168.1.61/solar_api/v1/GetInverterRealtimeData.cgi
+
+FRONIUS statuses
+
+0 OKAY Request successfully finished, Data are valid
+1 NotImplemented The request or a part of the request is not implemented yet
+2 Uninitialized Instance of APIRequest created, but not yet configured
+3 Initialized Request is configured and ready to be sent
+4 Running Request is currently being processed (waiting for response)
+5 Timeout Response was not received within desired time
+6 Argument Error Invalid arguments/combination of arguments or missing arguments
+7 LNRequestError Something went wrong during sending/receiving of LN-message
+8 LNRequestTimeout LN-request timed out
+9 LNParseError Something went wrong during parsing of successfully received LN-message
+10 ConfigIOError Something went wrong while reading settings from local config
+11 NotSupported The operation/feature or whatever is not supported
+12 DeviceNotAvailable The device is not available
+255 UnknownError undefined runtime error
