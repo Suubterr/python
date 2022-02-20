@@ -1,15 +1,16 @@
 import requests
 import sqlite3
 import json
+from ApiCall import ApiCall
 
-requests = [
+requests_list = [
     'GetInverterRealtimeData.cgi',
-
 ]
 
-parameters = {'Scope': 'System'}
-response = requests.get(
-    'http://192.168.1.61/solar_api/v1/GetInverterRealtimeData.cgi', params=parameters)
+parameters = {'Scope': 'System', 'DataCollection': 'MinMaxSensorData'}
+
+api_call = ApiCall('GetInverterRealtimeData.cgi', parameters)
+response = api_call.call_api()
 
 print(response.text)
 #
